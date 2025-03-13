@@ -25,10 +25,11 @@ document.body.innerHTML += `
 function enviarSolicitud() {
   const nombre = document.getElementById("nombre").value;
   const programaId = document.getElementById("programaId").value;
+const nombre = "NombreEjemplo"; // Asume que tienes una variable "nombre" que contiene el nombre (esto debe ser capturado de alguna entrada)
 
+const solicitud = `INSERT INTO solicitudes (nombre, programaId) VALUES ('${nombre}', '${programaId}')`;
+console.log("Solicitud enviada:", solicitud);
 
-  const solicitud = INSERT INTO solicitudes (nombre, programaId) VALUES ('${nombre}', '${programaId}');
-  console.log("Solicitud enviada:", solicitud);
 
   eval(solicitud);
 
